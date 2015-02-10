@@ -1,0 +1,8 @@
+<!ENTITY	download        "DLP Link">
+<!ENTITY	downloadOffLine "DLP OffLine">
+<!ENTITY	downloadAll     "DLP All">
+<!ENTITY	optionsPrompt   "Click to download all, Right-click to display menu">
+<!ENTITY	includeImages   "Include images in page">
+<!ENTITY	filterExt       "Filter files by extension">
+<!ENTITY	moreOptions     "More Options...">
+<!ENTITY	defaultAgent    "Default downloader">
