@@ -1,9 +1,8 @@
 var xThunderPref = {
     pref : null,
     uriSupReg : /^(?:ftp|https?):/i,
-    proSupReg : /^(?:thunder|flashget|qqdl|fs2you|ed2k|magnet):/i,
+    proSupReg : /^(?:ed2k|magnet):/i,
     invalidReg : /^(?:javascript|data|mailto):/i,
-    pros : ["thunder", "flashget", "qqdl", "fs2you", "ed2k", "magnet", "udown", "115"],
     agents: ["Thunder", "QQDownload", "DTA", "IDM", "ThunderLite", "ToolbarThunder", "FlashGet3", "FlashGetMini", "BitComet", "FDM", "NetTransport", "Orbit", "UDown"],
     agentsNonsup : {"ed2k"     : ["DTA", "IDM", "FlashGetMini", "BitComet", "FDM", "Orbit", "UDown"],
                     "magnet"   : ["DTA", "IDM", "ThunderLite", "ToolbarThunder", "FlashGetMini", "FDM", "Orbit", "UDown"],

@@ -8,14 +8,6 @@ var xThunderOptions = {
         // Get supported protocals and file extensions
         var rem = xThunderPref.getValue("remember");
         document.getElementById("remember").checked = rem;
-        for (var i=0; i<xThunderPref.pros.length; ++i) {
-            document.getElementById(xThunderPref.pros[i]).checked = false;
-        }
-        var supstr = xThunderPref.getValue("supportClick");
-        var supPros = supstr.split(",");
-        for (var j=0; j<supPros.length-1; ++j) {
-            document.getElementById(supPros[j]).checked = true;
-        }
 
         // Get interface
         document.getElementById("downSubMenu").disabled = !xThunderPref.getValue("downInCxtMenu");
@@ -32,12 +24,6 @@ var xThunderOptions = {
 
             // Set supported protocals and file extensions
             var supstr = "";
-            for (var i=0; i<xThunderPref.pros.length; ++i) {
-                if (document.getElementById(xThunderPref.pros[i]).checked) {
-                    supstr += (xThunderPref.pros[i] + ",");
-                }
-            }
-            xThunderPref.setValue("supportClick", supstr);
             var rem = document.getElementById("remember").checked ? 1 : 0;
             xThunderPref.setValue("remember", rem);
 
