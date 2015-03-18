@@ -59,22 +59,6 @@
                                 <column/>
                                 <column/>
                             </columns>
-                            <rows>
-                                <row align="baseline">
-                                    <checkbox id="thunder" label="&pro.thunder;"/>
-                                    <checkbox id="flashget" label="&pro.flashget;"/>
-                                    <checkbox id="qqdl" label="&pro.qqdl;"/>
-                                </row>
-                                <row align="baseline">
-                                    <checkbox id="ed2k" label="&pro.ed2k;"/>
-                                    <checkbox id="magnet" label="&pro.magnet;"/>
-                                    <checkbox id="fs2you" label="&pro.fs2you;"/>
-                                </row>
-                                <row align="baseline">
-                                    <checkbox id="udown" hidden="true" label="&pro.udown;"/>
-                                    <checkbox id="115" hidden="true" label="&pro.115;"/>
-                                </row>
-                            </rows>
                         </grid>
                         <checkbox id="remember" label="&remember;"/>
                         <textbox id="supportExt" preference="pref_supportExt" multiline="true" rows="3" cols="37"/>
