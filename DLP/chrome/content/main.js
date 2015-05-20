@@ -251,28 +251,24 @@ var xThunderMain = {
     	if (event) {
     		if (event.button == 1) {
                 // Middle click to use thunder vod offline
-                agent = "ThunderVODOffLine";
+                //agent = "ThunderVODOffLine";
             } else {
                 // Left click to use first agent offline
                 // Right click to use second agent offline
                 var agentList = xThunderPref.getEnabledAgentList(true);
                 var firstAgent = "ThunderOffLine";
-                var secondAgent = "QQDownloadOffLine";
+                //var secondAgent = "QQDownloadOffLine";
                 var thunderIndex = agentList.indexOf(firstAgent);
                 if (thunderIndex == -1) {
                 	thunderIndex = agentList.length;
                 }
-                var qqdownloadIndex = agentList.indexOf(secondAgent);
+                /*var qqdownloadIndex = agentList.indexOf(secondAgent);
                 if (qqdownloadIndex == -1) {
                 	qqdownloadIndex = agentList.length + 1;
-                }
+                }*/
                 // Swap agent if user set QQDownload before Thunder
-                if (thunderIndex > qqdownloadIndex) {
-                	var temp = firstAgent;
-                	firstAgent = secondAgent;
-                	secondAgent = temp;
-                }
-                agent = (event.button == 0 ? firstAgent : secondAgent);
+
+                agent = firstAgent ;
             }
         }
 
@@ -326,7 +322,7 @@ var xThunderMain = {
         	if (typeof linkNode.href == "undefined" ) {
         		linkNode = linkNode.parentNode;
         	}
-        	url = linkNode.getAttribute("fg") || linkNode.getAttribute("qhref") || gContextMenu.linkURL;
+        	url = gContextMenu.linkURL;
         } else if (gContextMenu.onImage) {
         	url = gContextMenu.target.src;
         } else {

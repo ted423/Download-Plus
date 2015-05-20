@@ -37,11 +37,6 @@ window.addEventListener("load", function() {
 
             basicBox.collapsed = true;
             normalBox.collapsed = false;
-
-            // Work around BUG 371508
-            try {
-                window.sizeToContent();
-            } catch (ex) {}	
         }
     }
         

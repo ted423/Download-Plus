@@ -367,14 +367,7 @@ var xThunder = {
         var cid = this.ARG_DEF_STR;
         if (agentName == "QQDownload") {
             cid = offLine ? "10600" : "0";
-        } else if (agentName.indexOf("Thunder") != -1) {
-            var matches;
-            if (matches = href.match(/^http:\/\/(?:thunder\.ffdy\.cc|www\.7369\.com|bt\.2tu\.cc)\/([0-9A-F]+)\//)) {
-                cid = matches[1];
-            } else if(matches = href.match(/^http:\/\/ggxxxzzz.com.*\?cid=(.*)/)) {
-                cid = matches[1];
-            }
-        }
+        } 
 
         return cid;
     }

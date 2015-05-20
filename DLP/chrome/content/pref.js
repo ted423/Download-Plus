@@ -3,16 +3,13 @@ var xThunderPref = {
     uriSupReg : /^(?:ftp|https?):/i,
     proSupReg : /^(?:ed2k|magnet):/i,
     invalidReg : /^(?:javascript|data|mailto):/i,
-    agents: ["Thunder", "QQDownload", "DTA", "IDM", "ThunderLite", "ToolbarThunder", "FlashGet3", "FlashGetMini", "BitComet", "FDM", "NetTransport", "Orbit", "UDown"],
-    agentsNonsup : {"ed2k"     : ["DTA", "IDM", "FlashGetMini", "BitComet", "FDM", "Orbit", "UDown"],
-                    "magnet"   : ["DTA", "IDM", "ThunderLite", "ToolbarThunder", "FlashGetMini", "FDM", "Orbit", "UDown"],
-                    "flashget" : ["Thunder", "QQDownload", "DTA", "IDM", "ThunderLite", "ToolbarThunder", "BitComet", "FDM", "NetTransport", "Orbit", "UDown",
-                                    "ThunderVOD", "ThunderOffLine", "QQDownloadOffLine", "ThunderVODOffLine"],
-                     "qqdl"    : ["Thunder", "DTA", "IDM", "ThunderLite", "ToolbarThunder", "BitComet", "FDM", "NetTransport", "Orbit", "UDown",
-                                    "ThunderVOD", "ThunderOffLine", "ThunderVODOffLine"]},
-    agentsOffLine : {"Thunder" : "http://lixian.vip.xunlei.com/lixian_login.html?furl=[URL]",
-                    "QQDownload": "http://lixian.qq.com/main.html?url=[URL]", 
-                    "ThunderVOD": "http://dynamic.vod.lixian.xunlei.com/play?action=http_sec&go=check&location=home&furl=[URL]"},
+    agents: ["Thunder", "QQDownload", "DTA", "IDM", "ThunderLite", "ToolbarThunder", "FlashGet3", "FlashGetMini", "BitComet", "FDM", "NetTransport", "Orbit"],
+    agentsNonsup : {"ed2k"     : ["DTA", "IDM", "FlashGetMini", "BitComet", "FDM", "Orbit"],
+                    "magnet"   : ["DTA", "IDM", "ThunderLite", "ToolbarThunder", "FlashGetMini", "FDM", "Orbit"],
+                    "flashget" : ["Thunder", "QQDownload", "DTA", "IDM", "ThunderLite", "ToolbarThunder", "BitComet", "FDM", "NetTransport", "Orbit",
+                                    "ThunderVOD", "ThunderOffLine"],
+                     "qqdl"    : ["Thunder", "DTA", "IDM", "ThunderLite", "ToolbarThunder", "BitComet", "FDM", "NetTransport", "Orbit", "ThunderOffLine"]},
+    agentsOffLine : {"Thunder" : "http://lixian.vip.xunlei.com/lixian_login.html?furl=[URL]"},
 
     // Only show available agents in popup menu
     appendAgentList : function(menupop, idpre, func, isradio, addOffLine){
@@ -67,21 +64,12 @@ var xThunderPref = {
             if (addOffLine && (enabled || !offLineAutoHide)) {
                 if (agent == "Thunder") {
                     agentList.push(agent + "OffLine");
-                    if (this.getValue("vodOffLine")) {
-                        agentList.push(agent + "VODOffLine");
-                    }
-                } else if (agent == "QQDownload") {
-                    agentList.push(agent + "OffLine");
-                }
+            	}
             }
             
             if (enabled) {
                 enableAgentList.push(agent);
             }
-        }
-        
-        if (addOffLine && this.getValue("qqOffLineWeb") && enableAgentList.indexOf("QQDownloadOffLine") == -1) {
-            enableAgentList.push("QQDownloadOffLine");
         }
         
         return enableAgentList;
