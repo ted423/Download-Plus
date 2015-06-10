@@ -5,21 +5,13 @@
 <!ENTITY	tab.downloader  "Downloader">
 <!ENTITY	tab.advanced    "Advanced">
 <!ENTITY	lbl.supClick    "Left Click">
-<!ENTITY	pro.thunder     "thunder (thunder://)">
-<!ENTITY	pro.flashget    "flashget (flashget://)">
-<!ENTITY	pro.qqdl        "qqdownload (qqdl://)">
-<!ENTITY	pro.fs2you      "rayfile (fs2you://)">
 <!ENTITY	pro.ed2k        "emule (ed2k://)">
 <!ENTITY	pro.magnet      "magnet (magnet:?)">
-<!ENTITY	pro.udown       "udown (udown://)">
-<!ENTITY	pro.115         "115 (115.com/file)">
 <!ENTITY	remember        "Associated common file type">
 <!ENTITY	filterext       "Filter links by above extensions first">
 <!ENTITY	lbl.downloadAll "Download All">
 <!ENTITY	includeImages   "Include images found in current page">
 <!ENTITY	lbl.monitor     "Monitor Link">
-<!ENTITY	ctrlNoMonitor   "Ctrl+Click = Open decoded link in background tab">
-<!ENTITY	ctrlAltDecode   "Ctrl+Alt+Click = Copy decoded link url to clipboard">
 <!ENTITY	useCandidate    "Try candidate downloaders when url is unsupported">
 <!ENTITY	lbl.showMenu            "Show Menu">
 <!ENTITY	showMenuIcons           "Show context menu icons">
@@ -34,8 +26,6 @@
 <!ENTITY	downOffLineSubMenu      "OffLine items in context submenu">
 <!ENTITY	downOffLineInSaveFile   "OffLine items in save as dialog">
 <!ENTITY	downOffLineSep          "Show separator before offLine items">
-<!ENTITY	vodOffLine              "Show Thunder vod after offLine items">
-<!ENTITY	qqOffLineWeb            "Use web version of QQDownload offLine">
 <!ENTITY	moveUpButton    "Move Up">
 <!ENTITY	moveDownButton  "Move Down">
 <!ENTITY	editButton      "Edit">
@@ -50,7 +40,5 @@
 <!ENTITY	agentFinishBtn  "Finish">
 <!ENTITY	agentCancelBtn  "Ignore">
 <!ENTITY	lbl.agentTip    "Tips: ">
-<!ENTITY	tip.lClickList  "1. Left click above list to select and toggle the item,">
-<!ENTITY	tip.rClickList  "    right click or middle click to select it only">
-<!ENTITY	tip.lClickMenu  "2. Left click DLP menuitem to use FIRST downloader,">
+<!ENTITY	tip.lClickMenu  "Left click DLP menuitem to use FIRST downloader,">
 <!ENTITY	tip.rClickMenu  "    right click - SECOND, middle click - THIRD">

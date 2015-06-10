@@ -71,30 +71,14 @@ var xThunderMain = {
         	try {
         		var decodedUrl;
         		if (ev.altKey) {
-        			if (xThunderPref.getValue("ctrlAltDecode")) {
-                        // Copy decode url to clipboard 
-                        decodedUrl = xThunderDecode.getDecodedNode(link);
-                        link.setAttribute("href", decodedUrl);
-                        var gClipboardHelper = Components.classes["@mozilla.org/widget/clipboardhelper;1"].
-                        getService(Components.interfaces.nsIClipboardHelper);
-                        gClipboardHelper.copyString(decodedUrl);
-                    } else {
-                        // Do Firefox default behavior
-                        return true;
-                    }
+        			return true;
                 } else {
                 	if (remExt == 1) {
                         // 0:never down, 1: auto down, -1: no down this time
                         xThunderPref.setValue("remember", -1); 
                     }
                     
-                    if (xThunderPref.getValue("ctrlNoMonitor") && (decodedUrl = xThunderDecode.getDecodedNode(link)) && decodedUrl != url) {
-                        // Open decoded link in current tab
-                        document.commandDispatcher.focusedWindow.location.href = decodedUrl;
-                    } else {
-                        // Open in backgrond new tab - Firefox default behavior
-                        return true;
-                    }
+                    return true;
                 }
             } catch(ex) {} 
             
@@ -250,8 +234,6 @@ var xThunderMain = {
     	var agent = "ThunderOffLine";
     	if (event) {
     		if (event.button == 1) {
-                // Middle click to use thunder vod offline
-                //agent = "ThunderVODOffLine";
             } else {
                 // Left click to use first agent offline
                 // Right click to use second agent offline

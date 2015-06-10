@@ -105,7 +105,7 @@ var xThunder = {
                 }
 
                 args = [];
-                if (this.offLine && (this.agentName != "QQDownload" || xThunderPref.getValue("qqOffLineWeb"))) { 
+                if (this.offLine && (this.agentName != "QQDownload")) { 
                     this.agentName = this.agentName.concat("OffLine");
                     exePath = this.getRequestUrl(this.agentName, this.urls[0], args);
                 } else if (this.agentName == "DTA") {
@@ -173,7 +173,7 @@ var xThunder = {
                     this.xThunderComponent = Components.classes["@fxthunder.com/component;1"].getService().wrappedJSObject;
                 }
 
-                if (offLine && (agent != "QQDownload" || xThunderPref.getValue("qqOffLineWeb"))) { 
+                if (offLine && (agent != "QQDownload")) { 
                     agent = this.candidate.agents[i];   //agent name ends with 'OffLine''
                     exePath = this.getRequestUrl(agent, canUrls[0], args);
                 } else {

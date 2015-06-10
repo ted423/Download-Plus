@@ -24,8 +24,6 @@
             <preference id="pref_supportExt" name="extensions.xthunder.supportExt" type="string"/>
             <preference id="pref_filterExt" name="extensions.xthunder.filterExt" type="bool"/>
             <preference id="pref_includeImages" name="extensions.xthunder.includeImages" type="bool"/>
-            <preference id="pref_ctrlNoMonitor" name="extensions.xthunder.ctrlNoMonitor" type="bool"/>
-            <preference id="pref_ctrlAltDecode" name="extensions.xthunder.ctrlAltDecode" type="bool"/>
             <preference id="pref_useCandidate" name="extensions.xthunder.useCandidate" type="bool"/>
             <preference id="pref_showMenuIcons" name="extensions.xthunder.showMenuIcons" type="bool"/>
             <preference id="pref_compactMenu" name="extensions.xthunder.compactMenu" type="bool"/>
@@ -39,8 +37,6 @@
             <preference id="pref_downOffLineSubMenu" name="extensions.xthunder.downOffLineSubMenu" type="bool"/>
             <preference id="pref_downOffLineInSaveFile" name="extensions.xthunder.downOffLineInSaveFile" type="bool"/>
             <preference id="pref_downOffLineSep" name="extensions.xthunder.downOffLineSep" type="bool"/>
-            <preference id="pref_qqOffLineWeb" name="extensions.xthunder.qqOffLineWeb" type="bool"/>
-            <preference id="pref_vodOffLine" name="extensions.xthunder.vodOffLine" type="bool"/>
         </preferences>
 
         <tabbox class="text">
@@ -72,8 +68,6 @@
                                          
                     <groupbox>
                         <caption label="&lbl.monitor;"/>
-                        <checkbox id="ctrlNoMonitor" label="&ctrlNoMonitor;" preference="pref_ctrlNoMonitor"/>
-                        <checkbox id="ctrlAltDecode" label="&ctrlAltDecode;" preference="pref_ctrlAltDecode"/>
                         <checkbox id="useCandidate" label="&useCandidate;" preference="pref_useCandidate"/>
                     </groupbox>
                 </tabpanel>
@@ -96,8 +90,6 @@
                         <checkbox id="downOffLineSubMenu" label="&downOffLineSubMenu;" preference="pref_downOffLineSubMenu"/>
                         <checkbox id="downOffLineInSaveFile" label="&downOffLineInSaveFile;" preference="pref_downOffLineInSaveFile"/>
                         <checkbox id="downOffLineSep" label="&downOffLineSep;" preference="pref_downOffLineSep"/>
-                        <checkbox id="vodOffLine" label="&vodOffLine;" preference="pref_vodOffLine"/>
-                        <checkbox id="qqOffLineWeb" label="&qqOffLineWeb;" preference="pref_qqOffLineWeb"/>
                     </groupbox>
                 </tabpanel>
 
@@ -117,9 +109,7 @@
                     </hbox>
                     <groupbox id="tipGroup">
                         <caption label="&lbl.agentTip;" class="caption-text-strong"/>
-                        <label id="tipLClickList" value="&tip.lClickList;" style="margin-top:5px;"/>
-                        <label id="tipRClickList" value="&tip.rClickList;"/>
-                        <label id="tipLClickMenu" value="&tip.lClickMenu;" style="margin-top:26px;"/>
+                        <label id="tipLClickMenu" value="&tip.lClickMenu;"/>
                         <label id="tipRClickMenu" value="&tip.rClickMenu;"/>
                     </groupbox>
                     <groupbox id="newAgentGroup" hidden="true">
